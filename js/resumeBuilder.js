@@ -1,4 +1,4 @@
-
+'use strict';
 // George Fischer's main source of javascript code for Resume Project.
 // Data sets for bio, education, work, publications (Pending) and projects.
 // TODO - Also create informative detailed data sets for Mapl location overlays.
