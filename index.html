@@ -8,12 +8,6 @@
 <head>
     <meta charset="utf-8">
     <title>Resume: George Fischer</title>
-    <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-            src="http://maps.googleapis.com/maps/api/js?libraries=places">
-    </script>
     <meta name="viewport" content="width=device-width">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -21,7 +15,7 @@
 </head>
 
 <body>
-  <div id="main">
+    <div id="main">
 
         <div id="header" class="center-content clear-fix">
           <ul id="topContacts" class="flex-box"></ul>
@@ -103,49 +97,50 @@
             </div>
         </div>
 
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box"></ul>
+        <div id="lets-connect" class="dark-gray">
+          <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box"></ul>
+        </div>
     </div>
-  </div>
 
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/resumeBuilder.js"></script>
 
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?libraries=places">
+    </script>
 
+    <script type="text/javascript">
+        if(document.getElementsByClassName('flex-item').length === 0) {
+          document.getElementById('topContacts').style.display = 'none';
+        }
+        if(document.getElementsByTagName('h1').length === 0) {
+          document.getElementById('header').style.display = 'none';
+        }
+        if(document.getElementsByClassName('work-entry').length === 0) {
+          document.getElementById('workExperience').style.display = 'none';
+        }
+        if(document.getElementsByClassName('project-entry').length === 0) {
+          document.getElementById('projects').style.display = 'none';
+        }
 
-  <script src="js/resumeBuilder.js"></script>
+        // TODO - Need to do all coding for Publications
+        // if(document.getElementsByClassName('publication-entry').length === 0) {
+        //   document.getElementById('pubications').style.display = 'none';
+        //}
 
-
-
-
-  <script type="text/javascript">
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-
-    // TODO - Need to do all coding for Publications
-    // if(document.getElementsByClassName('publication-entry').length === 0) {
-    //   document.getElementById('pubications').style.display = 'none';
-    //}
-
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
+        if(document.getElementsByClassName('education-entry').length === 0) {
+          document.getElementById('education').style.display = 'none';
+        }
+        if(document.getElementsByClassName('flex-item').length === 0) {
+          document.getElementById('lets-connect').style.display = 'none';
+        }
+        if(document.getElementById('map') === null) {
+          document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>

@@ -313,3 +313,4 @@ projects.display();
 //Display Map
 
 $("#mapDiv").append(googleMap);
+

@@ -300,7 +300,15 @@ window.addEventListener('resize', function(e) {
 // See link - http://getbootstrap.com/javascript/#collapse
 
 $("#collapseFive").on('shown.bs.collapse', function(e) {
+    console.log('hi');
     map.fitBounds(mapBounds);
+    map.setCenter(bounds.getCenter());
 });
 
+// $(function() {
+//  $("#accordion").on('show.bs.collapse', function(e) {
+//       console.log('hi');
+//       map.fitBounds(mapBounds);
+//  });
+// });
 
