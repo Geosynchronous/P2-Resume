@@ -302,7 +302,6 @@ window.addEventListener('resize', function(e) {
 $("#collapseFive").on('shown.bs.collapse', function(e) {
     console.log('hi');
     map.fitBounds(mapBounds);
-    map.setCenter(bounds.getCenter());
 });
 
 // $(function() {
