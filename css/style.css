@@ -262,10 +262,6 @@ span {
   padding: 0 5% 3% 5%;
 }
 
-/*
-This works...  But what is going on here?
-Adding a duplicate class to a class???
-*/
 .panel-group
 .panel + .panel {
   margin-top: 0;

@@ -295,10 +295,12 @@ window.addEventListener('resize', function(e) {
 });
 
 // TODO -- Make this work - ask Forums
+// Does not work like this, hidden map in resized window, displays gray only on show
 // Make sure the map bounds get updated on page resize on hidden collapsed map
+// See link - http://getbootstrap.com/javascript/#collapse
 
-// $("#accordian").on('shown.bs.collapse', function(e) {
-//     map.fitBounds(mapBounds);
-// });
+$("#collapseFive").on('shown.bs.collapse', function(e) {
+    map.fitBounds(mapBounds);
+});
 
 
