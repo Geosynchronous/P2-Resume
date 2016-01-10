@@ -197,7 +197,7 @@ bio.display = function() {
         .append(formattedImage)
     	.append(formattedWelcome);
 
-    if (bio.skills.length > 0) {
+    if (bio.skills.length) {
 
         $("#header").append(HTMLskillsStart);
 
@@ -291,7 +291,7 @@ projects.display = function() {
             	.append(formattedDates)
             	.append(formattedDescription);
 
-            if (val.images.length > 0) {
+            if (val.images.length) {
                 val.images.forEach(function(image) {
                         var formattedImage = HTMLprojectImage.replace("%data%", image);
                         $(".project-entry:last").append(formattedImage);
