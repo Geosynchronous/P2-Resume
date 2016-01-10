@@ -117,7 +117,7 @@ var work = {
     }, {
         'employer': "Physics, University of Utah",
         'title': "Electrical Engineer",
-        'location': "Seattle, WA, US",
+        'location': "Dugway, UT, US",
         'dates': "1981",
         'description': "Finished Cosmic Ray Research work on Fly's Eye Project. A data acquisition array of 80 large UV telescopes."
     }, {

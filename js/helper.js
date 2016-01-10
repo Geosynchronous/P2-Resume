@@ -109,7 +109,8 @@ function initializeMap() {
     var locations;
 
     var mapOptions = {
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.HYBRID
     };
 
 
@@ -130,30 +131,33 @@ function initializeMap() {
         // initializes an empty array
         var locations = [];
 
-        //  TODO - there is a problem with this line of code
-        // Maps display more locations without it.
-        // adds the single location property from bio to the locations array
+        // TODO - Return when duplicates can be removed
         // locations.push(bio.contacts.location);
 
-        // iterates through school locations and appends each location to
-        // the locations array
-        // for (var school in education.schools) {
-        //     if (education.schools.hasOwnProperty(school)) {
-        //         locations.push(education.schools[school].location);
-        //     }
-        // }
-
-        education.schools.forEach(function(school) {
-            locations.push(school.location);
-        });
+        // TODO -- Return these locations when duplicates can be removed from locations
+        // education.schools.forEach(function(school) {
+        //     locations.push(school.location);
+        // });
 
         // iterates through work locations and appends each location to
         // the locations array
 
         work.jobs.forEach(function(job) {
             locations.push(job.location);
-
         });
+
+// TODO -- http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array
+// If you're creating the array yourself, you can save yourself a loop and
+// the extra unique filter by doing the check as you're inserting the data;
+// Did not get this to work
+
+
+        // $.each(education.schools, function() {
+        //     var x = $(this).value;
+        //     if (!$.inArray(x, locations)) {
+        //         locations.push(x);
+        //     }
+        // });
 
         return locations;
     }
@@ -172,6 +176,8 @@ function initializeMap() {
         var lon = placeData.geometry.location.lng(); // longitude from the place service
         var name = placeData.formatted_address; // name of the place from the place service
         var bounds = window.mapBounds; // current boundaries of the map window
+
+        console.log(name);
 
         // TODO - Added this too to track down locations
         // console.log(placeData);
