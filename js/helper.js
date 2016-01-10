@@ -152,8 +152,8 @@ function initializeMap() {
 // Did not get this to work
 
 
-        // $.each(education.schools, function() {
-        //     var x = $(this).value;
+        // $.each(education.schools[school], function() {
+        //     var x = $(this).school;
         //     if (!$.inArray(x, locations)) {
         //         locations.push(x);
         //     }
@@ -239,10 +239,6 @@ function initializeMap() {
     */
     function callback(results, status) {
 
-        // TODO = Added this to try and figure out why locations isn't functioning well.
-        // SEE:https://discussions.udacity.com/t/how-does-camerons-google-map-code-work/30935
-        // console.log(results);
-
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             createMapMarker(results[0]);
         }
@@ -261,19 +257,19 @@ function initializeMap() {
         var service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
-        for (var place in locations) {
-            if (locations.hasOwnProperty(place)) {
+        // for (var place in locations) {
+
+            locations.forEach(function(place) {
 
                 // the search request object
                 var request = {
-                    query: locations[place]
+                    query: place
                 };
 
                 // Actually searches the Google Maps API for location data and runs the callback
                 // function with the search results after each search.
                 service.textSearch(request, callback);
-            }
-        }
+        });
     }
 
 
