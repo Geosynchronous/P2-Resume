@@ -128,36 +128,26 @@ function initializeMap() {
     */
     function locationFinder() {
 
-        // initializes an empty array
         var locations = [];
 
-        // TODO - Return when duplicates can be removed
-        // locations.push(bio.contacts.location);
+        locations.push(bio.contacts.location);
 
-        // TODO -- Return these locations when duplicates can be removed from locations
-        // education.schools.forEach(function(school) {
-        //     locations.push(school.location);
-        // });
-
-        // iterates through work locations and appends each location to
-        // the locations array
+        education.schools.forEach(function(school) {
+            locations.push(school.location);
+        });
 
         work.jobs.forEach(function(job) {
             locations.push(job.location);
         });
 
-// TODO -- http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array
-// If you're creating the array yourself, you can save yourself a loop and
-// the extra unique filter by doing the check as you're inserting the data;
-// Did not get this to work
+		// Removes redundant locations from the locations array.
+		// Google maps only excepts first 10 locations.
+		// https://discussions.udacity.com/t/resume-google-map-only-shows-partial-list-of-location-provided/34242/3
+		// http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array
 
-
-        // $.each(education.schools[school], function() {
-        //     var x = $(this).school;
-        //     if (!$.inArray(x, locations)) {
-        //         locations.push(x);
-        //     }
-        // });
+	  	locations = locations.filter(function(item, pos, self){
+			return self.indexOf(item) === pos;
+    	});
 
         return locations;
     }
