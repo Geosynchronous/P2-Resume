@@ -54,6 +54,11 @@ var education = {
         'school': "Udacity",
         'date': 2016,
         'url': "http://www.udacity.com/courses/all"
+    }, {
+        'title': "JavaScript: Understanding the Weird Parts",
+        'school': "Udemy",
+        'date': 2016,
+        'url': "https://www.udemy.com/understand-javascript"
     }]
 };
 
