@@ -10,7 +10,7 @@ Another purpose was to implement Google Maps with map place markers and info win
 ##How to run the Resume
 Two different ways of running the code are shown below:  
 1. To automatically load the Resume in a browser for viewing, go to http://geosynchronous.github.io/P2-Resume/  
-2. The game is located at https://github.com/Geosynchronous/P2-Resume. You may download all these files into a local directory on your computer. Once the files are in a local directory, all you need to do is click on index.html to open the program in a web browser. Soon as you do that you should see the game with some bugs with animated motion on a gaming background.
+2. The Resume is located at https://github.com/Geosynchronous/P2-Resume. You may download all these files into a local directory on your computer. Once the files are in a local directory, all you need to do is click on index.html to open the program in a web browser. Soon as you do that you should see the game with some bugs with animated motion on a gaming background.
 
 
 
