@@ -1,10 +1,10 @@
-Project 2 - Resume
-by George Fischer
-
-Udacity's Front-End Web Developer Nanodegree Course
-
+#Project 2 - Resume
+	by George Fischer  
+	An Apprentice in Udacity's Nanodegree Course: 
+		Front-End Web Developer  
+	
+##About this Project
 The main purpose of this project was to create a Professional Online Resume, and to implement front-end JSON data and jQuery library.
-
 Another purpose was to implement Google Maps with map place markers and info windows.
 
 I also added Bootstrap.js to implement the accordian menus.
