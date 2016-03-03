@@ -11,6 +11,10 @@ I also added Bootstrap.js to implement the accordian menus.
 
 This project was also implemented as a Responsive Web Design.
 
+##HOW TO RUN THE RESUME
+Two different ways of running the code are shown below:
+	1. To automatically load the Resume in a browser for viewing, go to http://geosynchronous.github.io/P2-Resume/
+	2. The game is located at https://github.com/Geosynchronous/P2-Resume. You may download all these files into a local directory on your computer. Once the files are in a local directory, all you need to do is click on index.html to open the program in a web browser. Soon as you do that you should see the game with some bugs with animated motion on a gaming background.
 
 
 UDACITY NOTES:
